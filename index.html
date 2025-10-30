@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonHost - Jasa Hosting & Pembuatan Website Keren</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#3b82f6', // Biru
+                        'secondary': '#8b5cf6', // Ungu
+                        'dark-bg': '#111827', // Latar belakang utama (Sangat Gelap)
+                        'card-bg': '#1f2937', // Latar belakang kartu (Gelap)
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Tambahan (jika diperlukan) --><style>
+        /* Efek glow untuk hero button */
+        .hero-button {
+            box-shadow: 0 0 15px 4px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+        .hero-button:hover {
+            box-shadow: 0 0 25px 8px rgba(59, 130, 246, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-200 font-inter antialiased">
+
+    <!-- ===== HEADER / NAVIGASI ===== --><header class="sticky top-0 z-50 w-full bg-dark-bg/80 backdrop-blur-md border-b border-gray-700/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo - Sekarang Teks --><a href="#" class="flex-shrink-0">
+                <span class="text-2xl font-bold text-white">BonHost</span>
+            </a>
+            
+            <!-- Navigasi Desktop --><div class="hidden md:flex space-x-8">
+                <a href="#fitur" class="text-gray-300 hover:text-white transition-colors">Fitur</a>
+                <a href="#jasa-web" class="text-gray-300 hover:text-white transition-colors">Jasa Website</a>
+                <a href="#paket" class="text-gray-300 hover:text-white transition-colors">Paket Hosting</a>
+                <a href="#kontak" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+            </div>
+            
+            <!-- Tombol CTA Desktop --><div class="hidden md:block">
+                <a href="#" class="px-5 py-2.5 bg-primary hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-all duration-300">
+                    Mulai Proyek
+                </a>
+            </div>
+            
+            <!-- Tombol Menu Mobile --><div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Menu Mobile (Hidden) --><div id="mobile-menu" class="md:hidden hidden bg-card-bg">
+            <a href="#fitur" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Fitur</a>
+            <a href="#jasa-web" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Jasa Website</a>
+            <a href="#paket" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Paket Hosting</a>
+            <a href="#kontak" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Kontak</a>
+            <a href="#" class="block px-4 py-4 bg-primary text-white text-center font-medium">Mulai Proyek</a>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== --><main>
+
+        <!-- ===== HERO SECTION ===== --><section class="relative pt-24 pb-32 text-center overflow-hidden">
+            <!-- Background Glow Effect --><div class="absolute -top-1/4 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-primary/20 blur-[100px] rounded-full -z-10"></div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Bangun Impian Digital Anda Bersama
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">BonHost</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+                    Solusi Hosting Cepat, Aman, dan Jasa Pembuatan Website Profesional. Wujudkan website keren Anda tanpa ribet.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#paket" class="hero-button px-8 py-4 bg-primary text-white font-semibold rounded-lg shadow-lg transition-transform duration-300">
+                        Lihat Paket Hosting
+                    </a>
+                    <a href="#jasa-web" class="px-8 py-4 bg-gray-700/50 text-gray-200 font-semibold rounded-lg backdrop-blur-sm border border-gray-600 hover:bg-gray-700 transition-all duration-300">
+                        Konsultasi Jasa Web
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FITUR UNGGULAN ===== --><section id="fitur" class="py-20 bg-dark-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-white mb-4">Kenapa Memilih BonHost?</h2>
+                <p class="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                    Kami tidak hanya menjual hosting, kami memberikan solusi lengkap untuk kesuksesan online Anda.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Fitur Card 1 --><div class="bg-card-bg p-6 rounded-xl shadow-lg border border-gray-700 transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="p-3 bg-primary/20 text-primary rounded-lg inline-block mb-4">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Hosting Super Cepat</h3>
+                        <p class="text-gray-400">Didukung SSD NVMe terbaru dan LiteSpeed Web Server untuk performa website kilat.</p>
+                    </div>
+                    <!-- Fitur Card 2 --><div class="bg-card-bg p-6 rounded-xl shadow-lg border border-gray-700 transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="p-3 bg-secondary/20 text-secondary rounded-lg inline-block mb-4">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Keamanan Berlapis</h3>
+                        <p class="text-gray-400">Gratis SSL, Imunify360, dan Proteksi DDoS untuk website yang selalu aman 24/7.</p>
+                    </div>
+                    <!-- Fitur Card 3 --><div class="bg-card-bg p-6 rounded-xl shadow-lg border border-gray-700 transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="p-3 bg-primary/20 text-primary rounded-lg inline-block mb-4">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Desain Website Keren</h3>
+                        <p class="text-gray-400">Tim kami siap membuatkan website (toko online, profil, dll) yang modern dan responsif.</p>
+                    </div>
+                    <!-- Fitur Card 4 --><div class="bg-card-bg p-6 rounded-xl shadow-lg border border-gray-700 transform transition-transform duration-300 hover:-translate-y-2">
+                        <div class="p-3 bg-secondary/20 text-secondary rounded-lg inline-block mb-4">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Support Prioritas</h3>
+                        <p class="text-gray-400">Bingung? Tim support kami siap membantu Anda kapanpun melalui WhatsApp & Tiket.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== JASA PEMBUATAN WEBSITE ===== --><section id="jasa-web" class="py-20 bg-card-bg overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Kolom Teks --><div>
+                        <span class="text-primary font-semibold tracking-wide uppercase">Jasa Khusus Kami</span>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-white mt-3 mb-6">Kami Buatkan Website Keren Untuk Anda</h2>
+                        <p class="text-lg text-gray-300 mb-8">
+                            Fokus saja pada bisnis Anda, biar kami yang urus sisi teknis website. Kami spesialis dalam membuat website yang tidak hanya keren secara visual, tapi juga cepat, aman, dan mudah digunakan (responsif).
+                        </p>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300">Desain Website Profil Perusahaan / Personal Branding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300">Pembuatan Toko Online (E-Commerce) lengkap dengan payment gateway</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-primary flex-shrink-0 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300">Landing Page profesional untuk produk atau event Anda</span>
+                            </li>
+                        </ul>
+                        <a href="#kontak" class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg shadow-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+                            Konsultasi Gratis Sekarang
+                        </a>
+                    </div>
+                    <!-- Kolom Gambar --><div class="relative">
+                        <img src="https://files.catbox.moe/qrbtl8.jpeg" 
+                             alt="Contoh Desain Website Keren"
+                             class="rounded-xl shadow-2xl w-full h-auto object-cover relative z-10">
+                        <!-- Efek dekorasi --><div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl -z-0"></div>
+                        <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary/20 rounded-lg blur-3xl -z-0"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PAKET HOSTING ===== --><section id="paket" class="py-20 bg-dark-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-white mb-4">Paket Hosting Terbaik Kami</h2>
+                <p class="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                    Pilih paket yang paling sesuai dengan kebutuhan Anda. Bisa upgrade kapan saja.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Paket 1: Personal --><div class="bg-card-bg p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Personal</h3>
+                        <p class="text-gray-400 mb-6">Sempurna untuk blog atau portofolio pribadi.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-white">Rp 50.000</span>
+                            <span class="text-gray-400">/bulan</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 GB SSD NVMe Storage</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Bandwidth</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 Website</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Gratis SSL</li>
+                        </ul>
+                        <a href="#" class="w-full text-center px-6 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                    
+                    <!-- Paket 2: Bisnis (Populer) --><div class="bg-card-bg p-8 rounded-xl shadow-2xl border-2 border-primary flex flex-col relative transform scale-105">
+                        <span class="absolute -top-4 right-6 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Paling Populer</span>
+                        <h3 class="text-2xl font-semibold text-white mb-2">Bisnis</h3>
+                        <p class="text-gray-400 mb-6">Untuk website UKM, toko online, atau agensi.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-white">Rp 850.000</span>
+                            <span class="text-gray-400">/bulan</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20 GB SSD NVMe Storage</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Bandwidth</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 Website</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Gratis SSL & Domain (.COM)</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Support Prioritas</li>
+                        </ul>
+                        <a href="#" class="w-full text-center px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 hero-button">
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                    
+                    <!-- Paket 3: Enterprise --><div class="bg-card-bg p-8 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Enterprise</h3>
+                        <p class="text-gray-400 mb-6">Performa tinggi untuk trafik besar.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-white">Rp 3.500.000</span>
+                            <span class="text-gray-400">/bulan</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>50 GB SSD NVMe Storage</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Bandwidth</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Website</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Gratis SSL & Domain (.COM)</li>
+                        </ul>
+                        <a href="#" class="w-full text-center px-6 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<footer id="kontak" class="bg-card-bg border-t border-gray-700/50 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Kolom 1: Logo (Teks) & Deskripsi --><div class="md:col-span-2">
+                <span class="text-2xl font-bold text-white mb-4 block">BonHost</span>
+                <p class="text-gray-400 max-w-md">
+                    BonHost adalah partner Anda dalam dunia digital, menyediakan layanan hosting berkualitas tinggi dan jasa pembuatan website yang keren dan fungsional.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Layanan</h4>
+                <ul class="space-y-3">
+                    <li><a href="#paket" class="text-gray-400 hover:text-primary transition-colors">Shared Hosting</a></li>
+                    <li><a href="#jasa-web" class="text-gray-400 hover:text-primary transition-colors">Jasa Pembuatan Website</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Registrasi Domain</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">VPS</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-lg font-semibold text-white mb-4">Hubungi Kami</h4>
+                <ul class="space-y-3">
+                    <li><a href="mailto:bonhostofficial@gmail.com" class="text-gray-400 hover:text-primary transition-colors">bonhostofficial@gmail.com</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">+62 822-6119-4366</a></li>
+                    <li class="flex space-x-4 pt-2">
+                        <a href="#" class="text-gray-400 hover:text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.269 5.007C16.51 5.007 15 6.516 15 8.275c0 1.76 1.51 3.269 3.269 3.269 1.759 0 3.268-1.509 3.268-3.269C21.537 6.516 20.028 5.007 18.269 5.007zm0 5.23c-.98 0-1.96-.981-1.96-1.96s.98-1.96 1.96-1.96 1.96.98 1.96 1.96-.98 1.96-1.96 1.96zm-.001-6.853c-3.793 0-6.853 3.06-6.853 6.853 0 3.792 3.06 6.852 6.853 6.852 3.792 0 6.852-3.06 6.852-6.852 0-3.793-3.06-6.853-6.852-6.853zm0 12.396c-3.06 0-5.543-2.483-5.543-5.543 0-3.06 2.483-5.543 5.543-5.543 3.06 0 5.543 2.483 5.543 5.543 0 3.06-2.483 5.543-5.543 5.543z"></path><path d="M12.001 10.75c-1.303 0-2.36 1.057-2.36 2.36s1.057 2.36 2.36 2.36 2.36-1.057 2.36-2.36-1.057-2.36-2.36-2.36zm0 3.41c-.58 0-1.05-.47-1.05-1.05s.47-1.05 1.05-1.05 1.05.47 1.05 1.05-.47 1.05-1.05 1.05zM12.001.377C5.589.377.377 5.589.377 12.001s5.212 11.624 11.624 11.624 11.624-5.212 11.624-11.624S18.413.377 12.001.377zm0 21.936c-5.69 0-10.312-4.622-10.312-10.312S6.311 1.689 12.001 1.689s10.312 4.622 10.312 10.312-4.622 10.312-10.312 10.312z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.77 13.019H3.567V9h3.54v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></paht></svg></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mt-12 border-t border-gray-700/50 pt-8 text-center">
+            <p class="text-gray-500">
+                © <span id="year"></span> BonHosting untuk mempermudah bisnis kalian
+            </p>
+        </div>
+    </footer>
+
+        <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Script untuk tahun copyright otomatis
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
